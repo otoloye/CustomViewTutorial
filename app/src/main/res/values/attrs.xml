@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CustomView">
+        <attr name="artistText" format="string" />
+        <attr name="trackText" format="string" />
+        <attr name="buyButton" format="string" />
+    </declare-styleable>
+</resources>
