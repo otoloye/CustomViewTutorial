@@ -2,7 +2,6 @@ package com.example.ot.customviewtutorial;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.Nullable;
 import android.support.annotation.StyleableRes;
 import android.util.AttributeSet;
 import android.view.View;
@@ -27,20 +26,12 @@ public class CustomView extends LinearLayout {
     TextView trackText;
     Button buyButton;
 
-    public CustomView(Context context) {
-        this(context, null);
+    public CustomView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+        init(context, attrs);
     }
 
-    public CustomView(Context context, @Nullable AttributeSet attrs) {
-        this(context, attrs, 0);
-    }
-
-    public CustomView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init(context, attrs, defStyleAttr);
-    }
-
-    private void init(Context context, AttributeSet attrs, int defStyleAttr) {
+    private void init(Context context, AttributeSet attrs) {
         inflate(context, R.layout.custom_view, this);
 
         int[] sets = {R.attr.artistText, R.attr.trackText, R.attr.buyButton};
